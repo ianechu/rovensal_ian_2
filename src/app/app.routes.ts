@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 import { Home } from './components/home/home';
 import { AlcaldeComponent } from './entregas/alcalde/component/alcaldeComponent/alcaldeComponent';
 import { AlcanyizComponent } from './entregas/alcanyiz/component/alcanyizComponent/alcanyizComponent';
+import { BuscarPokemon } from './entregas/alcanyiz/component/buscarPokemon/buscarPokemon';
+import { VistaDetalladaPokemon } from './entregas/alcanyiz/component/vistaDetalladaPokemon/vistaDetalladaPokemon';
+import { AlfonsoComponent } from './entregas/alfonso/component/alfonsoComponent/alfonsoComponent';
 import { CalinescuComponent } from './entregas/calinescu/component/calinescuComponent/calinescuComponent';
 import { CastanyeraComponent } from './entregas/castanyera/component/castanyeraComponent/castanyeraComponent';
 import { ContrerasComponent } from './entregas/contreras/component/contrerasComponent/contrerasComponent';
@@ -73,6 +76,8 @@ export const routes: Routes = [
     { path: 'home', component: Home },
     { path: 'alcalde', component: AlcaldeComponent },
     { path: 'alcanyiz', component: AlcanyizComponent },
+    { path: 'alcanyiz/buscarPokemon', component: BuscarPokemon },
+    { path: 'alcanyiz/pokemon/:nombre', component: VistaDetalladaPokemon },
     { path: 'alfonso', component: AlfonsoComponent },
     { 
         path: 'calinescu', 
