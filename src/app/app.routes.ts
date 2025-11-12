@@ -24,6 +24,8 @@ import { LugaresComponent } from './entregas/silvestre/component/lugaresZelda/lu
 import { SoaresComponent } from './entregas/soares/component/soaresComponent/soaresComponent';
 import { UskiComponent } from './entregas/uski/component/uskiComponent/uskiComponent';
 import { ZanonComponent } from './entregas/zanon/component/zanonComponent/zanonComponent';
+import { UskiHomePage } from './entregas/uski/pages/home/home.page';
+import { UskiContactPage } from './entregas/uski/pages/contact/contact.page';
 /** Mis componentes */
 import { ProductListRoutedComponent } from './entregas/reyna/components/product-list-routed/product-list-routed';
 import { CategoryListRouted } from './entregas/reyna/components/category-list-routed/category-list-routed';
@@ -126,6 +128,14 @@ export const routes: Routes = [
         ],
     },
     { path: 'silvestre', component: SilvestreComponent },
+    { path: 'soares', component: SoaresComponent },
+    { path: 'uski', component: UskiComponent,
+      children: [
+        { path: '', redirectTo: 'home', pathMatch: 'full' },
+        { path: 'home', component: UskiHomePage },
+        { path: 'contact', component: UskiContactPage }
+      ]
+    },
     {
 path: 'soares',
 component: SoaresComponent,
